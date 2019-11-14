@@ -1,4 +1,6 @@
 # STRC Web Data Sickle
+![128](https://user-images.githubusercontent.com/6837240/68853831-32263700-071e-11ea-85d1-27f060eb775b.png)
+
 스마트관광연구소 툴킷 시리즈. 웹 데이터 손낫.
 
 ## 왜 만들었나?
