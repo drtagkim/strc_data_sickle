@@ -19,6 +19,7 @@ btn2.addEventListener('click',function(e){
             {file:'js/content.js'}
         );
     });
+    window.close();
 });
 
 btn3.addEventListener('click',function(e){
