@@ -16,7 +16,7 @@ chrome.storage.sync.get("currentNum",function(data){
 });
 chrome.storage.sync.get("myscript1",function(data){
     let txt=$("#myscriptarea1");
-    txt.val(data.myscript);
+    txt.val(data.myscript1);
 });
 //event
 updateButton.addEventListener("click",function(e){
