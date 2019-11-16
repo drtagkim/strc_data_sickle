@@ -23,7 +23,7 @@ chrome.storage.sync.get("myscript1",function(data){
 });
 chrome.storage.sync.get("myscript2",function(data){
     let txt=$("#myscriptarea2");
-    txt.val(data.myscript1);
+    txt.val(data.myscript2);
 });
 //event
 updateButton.addEventListener("click",function(e){
