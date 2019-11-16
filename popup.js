@@ -1,6 +1,7 @@
 let btn1=document.querySelector("#scrollDown");
 let btn2=document.querySelector("#chooseFile");
 let btn3=document.querySelector("#myscript1");
+let btn4=document.querySelector("#myscript2");
 
 btn1.addEventListener('click',function(e){
     chrome.tabs.query({active:true,currentWindow:true},function(tabs){
@@ -29,6 +30,18 @@ btn3.addEventListener('click',function(e){
     },function(tabs){
         chrome.tabs.executeScript({
             file:'js/myscript1.js'
+        });
+    });
+    window.close();
+});
+
+btn4.addEventListener('click',function(e){
+    chrome.tabs.query({
+        active:true,
+        currentWindow:true
+    },function(tabs){
+        chrome.tabs.executeScript({
+            file:'js/myscript2.js'
         });
     });
     window.close();

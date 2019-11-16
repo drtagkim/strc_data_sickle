@@ -3,7 +3,8 @@ chrome.runtime.onInstalled.addListener(function(){
         "file_prefix":"strc_",
         "currentNum":1,
         "dateMarking":true,
-        "myscript1":""
+        "myscript1":"",
+        "myscript2":""
     },function(){
         console.log("install complete.");
     });

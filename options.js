@@ -3,6 +3,8 @@ var updateButton=document.querySelector("#updateButton");
 var setButton=document.querySelector("#setButton");
 var updateScript1Button=document.querySelector("#updatescript1");
 var clearSCript1Button=document.querySelector("#clearscript1");
+var updateScript2Button=document.querySelector("#updatescript2");
+var clearSCript2Button=document.querySelector("#clearscript2");
 //setting
 chrome.storage.sync.get("file_prefix",function(data){     
     filePrefix.value=data.file_prefix;
@@ -17,6 +19,10 @@ chrome.storage.sync.get("currentNum",function(data){
 });
 chrome.storage.sync.get("myscript1",function(data){
     let txt=$("#myscriptarea1");
+    txt.val(data.myscript1);
+});
+chrome.storage.sync.get("myscript2",function(data){
+    let txt=$("#myscriptarea2");
     txt.val(data.myscript1);
 });
 //event
@@ -47,7 +53,6 @@ setButton.addEventListener("click",function(e){
 updateScript1Button.addEventListener("click",function(e){
     let txt=$("#myscriptarea1");
     let content=txt.val();
-    //console.log(content);
     chrome.storage.sync.set({
         "myscript1":content
     },function(){
@@ -60,6 +65,23 @@ updateScript1Button.addEventListener("click",function(e){
 });
 clearSCript1Button.addEventListener("click",function(e){
     let obj=$("#myscriptarea1");
+    obj.val("");
+});
+updateScript2Button.addEventListener("click",function(e){
+    let txt=$("#myscriptarea2");
+    let content=txt.val();
+    chrome.storage.sync.set({
+        "myscript2":content
+    },function(){
+        let msg3=$("#msg4");
+        msg3.text("Script updated");
+        msg3.fadeOut(1000,function(){
+            location.reload();
+        });
+    });
+});
+clearSCript2Button.addEventListener("click",function(e){
+    let obj=$("#myscriptarea2");
     obj.val("");
 });
 //Checkboxes
