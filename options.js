@@ -2,6 +2,7 @@ var filePrefix=document.querySelector("#filePrefix");
 var updateButton=document.querySelector("#updateButton");
 var setButton=document.querySelector("#setButton");
 var updateScript1Button=document.querySelector("#updatescript1");
+var clearSCript1Button=document.querySelector("#clearscript1");
 //setting
 chrome.storage.sync.get("file_prefix",function(data){     
     filePrefix.value=data.file_prefix;
@@ -56,6 +57,10 @@ updateScript1Button.addEventListener("click",function(e){
             location.reload();
         });
     });
+});
+clearSCript1Button.addEventListener("click",function(e){
+    let obj=$("#myscriptarea1");
+    obj.val("");
 });
 //Checkboxes
 var chkMarking=$("#chkMarking");
