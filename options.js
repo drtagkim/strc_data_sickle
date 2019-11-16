@@ -1,6 +1,7 @@
 var filePrefix=document.querySelector("#filePrefix");
 var updateButton=document.querySelector("#updateButton");
 var setButton=document.querySelector("#setButton");
+var updateScript1Button=document.querySelector("#updatescript1");
 //setting
 chrome.storage.sync.get("file_prefix",function(data){     
     filePrefix.value=data.file_prefix;
@@ -13,7 +14,10 @@ chrome.storage.sync.get("currentNum",function(data){
     let txt=$("#currentNum");
     txt.val(data.currentNum);
 });
-
+chrome.storage.sync.get("myscript1",function(data){
+    let txt=$("#myscriptarea1");
+    txt.val(data.myscript);
+});
 //event
 updateButton.addEventListener("click",function(e){
     chrome.storage.sync.set({
@@ -35,6 +39,20 @@ setButton.addEventListener("click",function(e){
         let msg2=$("#msg2");
         msg2.text("Number updated");
         msg2.fadeOut(1000,function(){
+            location.reload();
+        });
+    });
+});
+updateScript1Button.addEventListener("click",function(e){
+    let txt=$("#myscriptarea1");
+    let content=txt.val();
+    //console.log(content);
+    chrome.storage.sync.set({
+        "myscript1":content
+    },function(){
+        let msg3=$("#msg3");
+        msg3.text("Script updated");
+        msg3.fadeOut(1000,function(){
             location.reload();
         });
     });
