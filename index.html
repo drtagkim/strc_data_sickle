@@ -4,26 +4,72 @@
         <link rel="stylesheet" href="css/w3.css">
         <style>
             .pane{
-                width:300px;
+                width:400px;
             }
             button {
-                width:280px;
+                width:240px;
             }
             h3 {text-align:center;}
             h5 {text-align:center;}
         </style>
     </head>
     <body>
-        <div class="w3-card-4">
+        <div class="w3-card-4 pane">
             <header class="w3-container w3-deep-orange">
                 <h3>Web Data Sickle</h3>
             </header>
             <div class="w3-container">
                 <center>
-                    <p><button id="scrollDown" class="w3-button w3-black">Scroll down</button></p>
-                    <p><button id="myscript1" class="w3-button w3-green">Execute script (NEXT)</button></p>
-                    <p><button id="myscript2" class="w3-button w3-yellow">Execute script (MORE)</button></p>
-                    <p><button id="chooseFile" class="w3-button w3-red">Export data</button></p>
+                    <p>
+                        <input class="w3-check" type="checkbox">
+                        <button id="scrollDown" class="w3-button w3-black">Scroll down</button>
+                        <select class="w3-select w3-border" style="width:50px;" name="opt1" disabled>
+                            <option value="-1" selected>NA</option>
+                            <option value="1">#1</option>
+                            <option value="2">#2</option>
+                            <option value="3">#3</option>
+                            <option value="4">#4</option>
+                        </select>
+                    </p>
+                    <p>
+                        <input class="w3-check" type="checkbox">
+                        <button id="myscript1" class="w3-button w3-green">Execute script (NEXT)</button>
+                        <select class="w3-select w3-border" style="width:50px;" name="opt2" disabled>
+                                <option value="-1" selected>NA</option>
+                                <option value="1">#1</option>
+                                <option value="2">#2</option>
+                                <option value="3">#3</option>
+                                <option value="4">#4</option>
+                            </select>                   
+                    </p>
+                    <p>
+                        <input class="w3-check" type="checkbox">    
+                        <button id="myscript2" class="w3-button w3-yellow">Execute script (MORE)</button>
+                        <select class="w3-select w3-border" style="width:50px;" name="opt3" disabled>
+                                <option value="-1" selected>NA</option>
+                                <option value="1">#1</option>
+                                <option value="2">#2</option>
+                                <option value="3">#3</option>
+                                <option value="4">#4</option>
+                            </select>                    
+                    </p>
+                    <p>
+                        <input class="w3-check" type="checkbox">
+                        <button id="chooseFile" class="w3-button w3-red">Export data</button>
+                        <select class="w3-select w3-border" style="width:50px;" name="opt4" disabled>
+                                <option value="-1" selected>NA</option>
+                                <option value="1">#1</option>
+                                <option value="2">#2</option>
+                                <option value="3">#3</option>
+                                <option value="4">#4</option>
+                            </select>                    
+                    </p>
+                    <p>
+                            <input class="w3-border" type="text" size="4" disabled>
+                            <button id="btn_auto" class="w3-btn w3-blue" style="width:50%;" disabled>Automatic Run</button>
+                        
+                        
+                    </p>
                 </center>
             </div>
             <footer class="w3-container w3-deep-orange">
