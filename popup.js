@@ -1,7 +1,7 @@
-const btn2=document.querySelector("#chooseFile");
-const btn3=document.querySelector("#myscript1");
-const btn4=document.querySelector("#myscript2");
-const btn1=document.querySelector("#scrollDown");
+const btn2=document.querySelector("#chooseFile"); //2
+const btn3=document.querySelector("#myscript1"); //3
+const btn4=document.querySelector("#myscript2"); //1
+const btn1=document.querySelector("#scrollDown"); //4
 const chkopt1=document.querySelector("#chkopt1");
 const chkopt2=document.querySelector("#chkopt2");
 const chkopt3=document.querySelector("#chkopt3");

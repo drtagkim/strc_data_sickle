@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(function(){
         "myscript2":"",
         "n_auto_var":1,
         "automatic":true,
-        "scripts":['js/myscript2.js','js/myscript1.js','js/content.js','js/scrolldown.js'],
+        "scripts":['js/myscript2.js','js/content.js','js/myscript1.js','js/scrolldown.js'],
         "scripts_order":[]
     },function(){
         console.log("install complete.");
