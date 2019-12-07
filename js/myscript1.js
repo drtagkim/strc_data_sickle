@@ -3,6 +3,7 @@ chrome.storage.sync.get("myscript1",function(data){
         let obj=document.querySelector(data.myscript1);
         obj.click();
     } catch(e) {
-        alert("Check option.");
+        alert("Check option. "+data.myscript1);
+
     }
 });

@@ -50,7 +50,7 @@ setButton.addEventListener("click",function(e){
         });
     });
 });
-updateScript1Button.addEventListener("click",function(e){
+updateScript1Button.addEventListener("click",function(e){ //next
     let txt=$("#myscriptarea1");
     let content=txt.val();
     chrome.storage.sync.set({
@@ -67,7 +67,7 @@ clearSCript1Button.addEventListener("click",function(e){
     let obj=$("#myscriptarea1");
     obj.val("");
 });
-updateScript2Button.addEventListener("click",function(e){
+updateScript2Button.addEventListener("click",function(e){ //more
     let txt=$("#myscriptarea2");
     let content=txt.val();
     chrome.storage.sync.set({

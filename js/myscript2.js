@@ -5,6 +5,6 @@ chrome.storage.sync.get("myscript2",function(data){
             item.click();
         });
     } catch(e) {
-        alert("Check option.");
+        alert("Check option. "+data.myscript2);
     }
 });

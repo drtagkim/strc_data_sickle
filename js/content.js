@@ -47,5 +47,4 @@ function writeFile(data) {
     });
 }
 content=document.body.innerHTML;
-
 writeFile(content);
